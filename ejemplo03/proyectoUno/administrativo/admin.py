@@ -45,5 +45,6 @@ class NumeroTelefonicoAdmin(admin.ModelAdmin):
     
     def get_estudiante(self, obj):
         """ """
-        return obj.estudiante.apellido
+        return "%s | %s" %(obj.estudiante.nombre,
+            obj.estudiante.apellido)
 admin.site.register(NumeroTelefonico, NumeroTelefonicoAdmin)
